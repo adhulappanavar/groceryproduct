@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @groceryproduct.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @groceryproduct.content %>
+</p>
+
+<p>
+  <strong>Published on:</strong>
+  <%= @groceryproduct.published_on %>
+</p>
+
+<%= link_to 'Edit', edit_groceryproduct_path(@groceryproduct) %> |
+<%= link_to 'Back', groceryproducts_path %>

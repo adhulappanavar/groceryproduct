@@ -1,0 +1,42 @@
+<h1>Listing groceryproducts</h1>
+
+<%= form_tag search_groceryproducts_path, :method => 'get' do %>
+  <%= label_tag :query %>
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag :search %>
+<% end %>
+
+<hr>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>BaseProductDescription</th>
+      <th>CountryOfOriginName</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @groceryproducts.each do |groceryproduct| %>
+      <tr>
+        <td><%= groceryproduct.Title %></td>
+        <td><%= groceryproduct.BaseProductDescription %></td>
+        <td><%= groceryproduct.CountryOfOriginName %></td>
+        <td><%= link_to 'Show', groceryproduct %></td>
+        <td><%= link_to 'Edit', edit_groceryproduct_path(groceryproduct) %></td>
+        <td><%= link_to 'Destroy', groceryproduct, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Groceryproduct', new_groceryproduct_path %>
+<%= link_to 'Back', groceryproducts_path if params[:q] %>
+
