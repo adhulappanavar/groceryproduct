@@ -1,0 +1,112 @@
+aaa111@bbb222 /d/2014/learn/rail_examples/tire_groceryproduct
+$ git init
+fatal: unable to access 'p://.gitconfig': Invalid argument
+
+aaa111@bbb222 /d/2014/learn/rail_examples/tire_groceryproduct
+$ set HOMEPATH=\
+>
+
+aaa111@bbb222 /d/2014/learn/rail_examples/tire_groceryproduct
+$ set HOMEPATH=/d
+
+aaa111@bbb222 /d/2014/learn/rail_examples/tire_groceryproduct
+$ git init
+fatal: unable to access 'p://.gitconfig': Invalid argument
+
+aaa111@bbb222 /d/2014/learn/rail_examples/tire_groceryproduct
+$ env HOMEPATH=/d
+HOMEPATH=/d
+APPDATA=C:\Users\aaa111\AppData\Roaming
+.....
+LESSCHARSET=utf-8
+HOME=/p
+SHLVL=1
+...
+SESSIONNAME=Console
+GNUPGHOME=/p/.gnupg
+HISTFILE=/p/.bash_history
+COMPUTERNAME=bbb222
+OLDPWD=/d/2014/learn/rail_examples
+_=/bin/env
+
+aaa111@bbb222 /d/2014/learn/rail_examples/tire_groceryproduct
+$ git init
+fatal: unable to access 'p://.gitconfig': Invalid argument
+
+aaa111@bbb222 /d/2014/learn/rail_examples/tire_groceryproduct
+$ env HOMEPATH=/d;HOME=/d        <------- IMPORTANT COMMAND AFTER WHICH GIT STARTED WORKING
+HOMEPATH=/d
+...
+LESSCHARSET=utf-8
+HOME=/p
+SHLVL=1
+...
+HOMEDRIVE=P:
+...
+SESSIONNAME=Console
+GNUPGHOME=/p/.gnupg
+HISTFILE=/p/.bash_history
+COMPUTERNAME=bbb222
+OLDPWD=/d/2014/learn/rail_examples
+_=/bin/env
+
+aaa111@bbb222 ~/2014/learn/rail_examples/tire_groceryproduct
+$ git init
+Initialized empty Git repository in d:/2014/learn/rail_examples/tire_groceryproduct/.git/
+
+aaa111@bbb222 ~/2014/learn/rail_examples/tire_groceryproduct (master)
+$ pwd
+/d/2014/learn/rail_examples/tire_groceryproduct
+
+aaa111@bbb222 ~/2014/learn/rail_examples/tire_groceryproduct (master)
+$ git add .
+warning: LF will be replaced by CRLF in akd_groceryprd_tire_app/.gitignore.
+
+aaa111@bbb222 ~/2014/learn/rail_examples/tire_groceryproduct (master)
+
+
+aaa111@bbb222 ~/2014/learn/rail_examples/tire_groceryproduct (master)
+$ git commit -m "Working version ...."
+[master (root-commit) f5d7fdb] Working version ....
+ Committer: unknown <aaa111@bbb222.org>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+warning: LF will be replaced by CRLF in akd_groceryprd_tire_app/.gitignore.
+The file will have its original line endings in your working directory.
+....
+ 75 files changed, 1472 insertions(+)
+ create mode 100644 akd_groceryprd_tire_app/.gitignore
+ create mode 100644 akd_groceryprd_tire_app/Gemfile
+....
+ create mode 100644 rails-application-template.rb
+
+aaa111@bbb222 ~/2014/learn/rail_examples/tire_groceryproduct (master)
+
+aaa111@bbb222 ~/2014/learn/rail_examples/tire_groceryproduct (master)
+$ git remote add origin https://github.com/adhulappanavar/groceryproduct.git
+
+aaa111@bbb222 ~/2014/learn/rail_examples/tire_groceryproduct (master)
+$ git push -u origin master
+Username for 'https://github.com': adhulappanavar
+Password for 'https://adhulappanavar@github.com':
+Counting objects: 88, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (82/82), done.
+Writing objects: 100% (88/88), 22.48 KiB | 0 bytes/s, done.
+Total 88 (delta 2), reused 0 (delta 0)
+To https://github.com/adhulappanavar/groceryproduct.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+aaa111@bbb222 ~/2014/learn/rail_examples/tire_groceryproduct (master)
+$
+
